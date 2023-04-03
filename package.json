@@ -11,6 +11,7 @@
     "lint": "eslint --fix --ext .ts,.tsx ./src"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "antd": "^5.4.0",
@@ -18,7 +19,9 @@
     "highcharts-react-official": "^3.2.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "sass": "^1.60.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.192",
