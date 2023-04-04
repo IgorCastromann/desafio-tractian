@@ -1,0 +1,38 @@
+.ant-layout-header {
+  background: #1e3a8a !important;
+  filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.06));
+}
+
+.ant-layout-sider {
+  background: #5c43e5 !important;
+}
+
+.ant-divider {
+  padding: 0 24px;
+  width: 80% !important;
+}
+
+.ant-layout-content {
+  padding: 54px;
+  overflow: auto;
+}
+
+.ant-layout {
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.content {
+  background: white;
+  min-height: 100%;
+}
