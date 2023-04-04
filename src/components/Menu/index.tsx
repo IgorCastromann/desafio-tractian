@@ -5,6 +5,10 @@ import TractianLogo from "@src/assets/logo-tractian.svg";
 
 const data = [
   {
+    to: "/",
+    text: "Dashboard",
+  },
+  {
     to: "/assets",
     text: "Ativos",
   },
@@ -36,7 +40,6 @@ export const Menu = () => {
                 preview={false}
               />
             </Link>
-
             <List
               itemLayout="horizontal"
               dataSource={data}
