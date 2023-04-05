@@ -1,7 +1,7 @@
 import { Active, Status } from "@src/services/types";
 import { useMemo } from "react";
 import controller from "./controller";
-import { Card } from "antd";
+import { Button, Card, Tooltip } from "antd";
 import { StatusCard } from "@src/components/StatusCard";
 import { GenericChart } from "../GenericChart";
 import styles from "./styles.module.scss";
@@ -28,6 +28,17 @@ export const ActivesStatus = observer(({ actives }: ActivesStatus) => {
               {Object.entries(controller.statusCount).map(([res], idx) => (
                 <StatusCard status={res as Status} key={idx} />
               ))}
+              {controller.hasFiltersActive ? (
+                <Tooltip title="Remover os filtros ativos">
+                  <Button
+                    type="primary"
+                    onClick={controller.handleResetFilters}
+                    className={styles["clear-filters-button"]}
+                  >
+                    X
+                  </Button>
+                </Tooltip>
+              ) : null}
             </div>
           </section>
         }

@@ -86,6 +86,14 @@ class ActivesStatusController {
       y,
     }));
   }
+
+  public handleResetFilters = () => {
+    activesStore.setFilter(undefined);
+  };
+
+  public get hasFiltersActive() {
+    return !!activesStore.filterByStatus;
+  }
 }
 
 const controller = new ActivesStatusController();
