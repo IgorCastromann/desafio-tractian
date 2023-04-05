@@ -24,4 +24,34 @@ export class AnalysesService {
 
     return user;
   };
+
+  public deleteUser = async (id: number) => {
+    const response = await fetch(`${BASE_URL}/users/${id}`, {
+      method: "DELETE",
+    });
+    const user = await response.json();
+
+    return user;
+  };
+
+  public fetchCompanies = async () => {
+    const response = await fetch(`${BASE_URL}/companies`);
+    const companies = await response.json();
+
+    return companies;
+  };
+
+  public fetchUnits = async () => {
+    const response = await fetch(`${BASE_URL}/units`);
+    const units = await response.json();
+
+    return units;
+  };
+
+  public fetchWorkOrders = async () => {
+    const response = await fetch(`${BASE_URL}/workorders`);
+    const workOrders = await response.json();
+
+    return workOrders;
+  };
 }
