@@ -8,8 +8,20 @@ export class AnalysesService {
     const response = await fetch(`${BASE_URL}/assets`);
     const actives = await response.json();
 
-    // TODO remove console.log()
-    console.log(actives);
     return actives;
+  };
+
+  public fetchUsers = async () => {
+    const response = await fetch(`${BASE_URL}/users`);
+    const users = await response.json();
+
+    return users;
+  };
+
+  public fetchUserById = async (id: number) => {
+    const response = await fetch(`${BASE_URL}/users/${id}`);
+    const user = await response.json();
+
+    return user;
   };
 }
