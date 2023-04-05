@@ -12,7 +12,7 @@ import { ActivesRPM } from "@src/components/Charts/ActivesRPM";
 import { ActivesHealth } from "@src/components/Charts/ActivesHealth";
 import { ActivesStatus } from "@src/components/Charts/ActivesStatus";
 
-export const Dashboard = observer(() => {
+const Dashboard = observer(() => {
   useEffect(() => {
     activesStore.fetchActives();
     userStore.fetchUsers();
@@ -35,3 +35,5 @@ export const Dashboard = observer(() => {
     </>
   );
 });
+
+export default Dashboard;
