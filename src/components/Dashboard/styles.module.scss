@@ -1,0 +1,24 @@
+.status-container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+}
+
+.section-graphs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 2210px) {
+  .section-graphs {
+    justify-content: flex-start;
+  }
+}
