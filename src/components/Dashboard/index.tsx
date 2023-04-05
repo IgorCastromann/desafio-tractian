@@ -25,12 +25,12 @@ export const Dashboard = observer(() => {
       </Typography.Title>
 
       <section className={styles["section-graphs"]}>
-        <ActivesStatus actives={activesStore.actives} />
-        <ActivesHealth actives={activesStore.actives} />
-        <ActivesRPM actives={activesStore.actives} />
-        <ActivesPower actives={activesStore.actives} />
-        <ActivesCollects actives={activesStore.actives} />
-        <ActivesLastCollect actives={activesStore.actives} />
+        <ActivesStatus actives={activesStore.filteredActives} />
+        <ActivesHealth actives={activesStore.filteredActives} />
+        <ActivesRPM actives={activesStore.filteredActives} />
+        <ActivesPower actives={activesStore.filteredActives} />
+        <ActivesCollects actives={activesStore.filteredActives} />
+        <ActivesLastCollect actives={activesStore.filteredActives} />
       </section>
     </>
   );
