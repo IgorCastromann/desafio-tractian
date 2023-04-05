@@ -26,6 +26,11 @@ class ActivesPowerController {
           text: "Potência (kWh)",
         },
       },
+      tooltip: {
+        headerFormat: "<span>{series.name}</span><br>",
+        pointFormat:
+          '<b style="color:{point.color}">{point.name}</b>: <b>{point.y} kWh</b><br/>',
+      },
     });
 }
 
