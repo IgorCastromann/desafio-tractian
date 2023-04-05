@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
-import activesStore from "@src/store/actives";
+import assetsStore from "@src/store/assets";
 import { observer } from "mobx-react-lite";
 
 import { Typography } from "antd";
 import userStore from "@src/store/user";
-import { ActivesLastCollect } from "@src/components/Charts/ActivesLastCollect";
-import { ActivesCollects } from "@src/components/Charts/ActivesCollects";
-import { ActivesPower } from "@src/components/Charts/ActivesPower";
-import { ActivesRPM } from "@src/components/Charts/ActivesRPM";
-import { ActivesHealth } from "@src/components/Charts/ActivesHealth";
-import { ActivesStatus } from "@src/components/Charts/ActivesStatus";
+import { AssetsLastCollect } from "@src/components/Charts/AssetsLastCollect";
+import { AssetsCollects } from "@src/components/Charts/AssetsCollects";
+import { AssetsPower } from "@src/components/Charts/AssetsPower";
+import { AssetsRPM } from "@src/components/Charts/AssetsRPM";
+import { AssetsHealth } from "@src/components/Charts/AssetsHealth";
+import { AssetsStatus } from "@src/components/Charts/AssetsStatus";
 
 const Dashboard = observer(() => {
   useEffect(() => {
-    activesStore.fetchActives();
+    assetsStore.fetchAssets();
     userStore.fetchUsers();
   }, []);
 
@@ -25,12 +25,12 @@ const Dashboard = observer(() => {
       </Typography.Title>
 
       <section className={styles["section-graphs"]}>
-        <ActivesStatus actives={activesStore.filteredActives} />
-        <ActivesHealth actives={activesStore.filteredActives} />
-        <ActivesRPM actives={activesStore.filteredActives} />
-        <ActivesPower actives={activesStore.filteredActives} />
-        <ActivesCollects actives={activesStore.filteredActives} />
-        <ActivesLastCollect actives={activesStore.filteredActives} />
+        <AssetsStatus assets={assetsStore.filteredAssets} />
+        <AssetsHealth assets={assetsStore.filteredAssets} />
+        <AssetsRPM assets={assetsStore.filteredAssets} />
+        <AssetsPower assets={assetsStore.filteredAssets} />
+        <AssetsCollects assets={assetsStore.filteredAssets} />
+        <AssetsLastCollect assets={assetsStore.filteredAssets} />
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-export interface Active {
+export interface Asset {
   assignedUserIds: number[];
   companyId: number;
   healthHistory: HealthHistory[];

@@ -1,10 +1,10 @@
-import { Active } from "@src/services/types";
-import { buildDefaultHighChartsActivesOption } from "@src/utils/chart";
+import { Asset } from "@src/services/types";
+import { buildDefaultHighChartsAssetsOption } from "@src/utils/chart";
 import { SeriesOptionsType } from "highcharts";
 
-class ActivesCollectsController {
-  public buildOptions = (actives: Active[]) =>
-    buildDefaultHighChartsActivesOption({
+class AssetsCollectsController {
+  public buildOptions = (assets: Asset[]) =>
+    buildDefaultHighChartsAssetsOption({
       chart: {
         type: "column",
         backgroundColor: "white",
@@ -14,10 +14,10 @@ class ActivesCollectsController {
         {
           name: "Ativos",
           colorByPoint: true,
-          data: actives.map((active) => {
+          data: assets.map((asset) => {
             return {
-              name: active.name,
-              y: active.metrics.totalCollectsUptime,
+              name: asset.name,
+              y: asset.metrics.totalCollectsUptime,
             };
           }),
         },
@@ -34,5 +34,5 @@ class ActivesCollectsController {
     });
 }
 
-const controller = new ActivesCollectsController();
+const controller = new AssetsCollectsController();
 export default controller;

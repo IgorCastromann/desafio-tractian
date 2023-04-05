@@ -1,16 +1,16 @@
-import { trantatedHealthStatus } from "@src/services/types/actives";
+import { trantatedHealthStatus } from "@src/services/types/assets";
 import { HealthStatus, Status } from "@src/services/types";
-import activesStore from "@src/store/actives";
-import { buildDefaultHighChartsActivesOption } from "@src/utils/chart";
+import assetsStore from "@src/store/assets";
+import { buildDefaultHighChartsAssetsOption } from "@src/utils/chart";
 import { SeriesOptionsType } from "highcharts";
 import { makeAutoObservable } from "mobx";
 
-class ActivesStatusController {
+class AssetsStatusController {
   public constructor() {
     makeAutoObservable(this);
   }
   public buildOptions = (data: unknown) =>
-    buildDefaultHighChartsActivesOption({
+    buildDefaultHighChartsAssetsOption({
       chart: {
         plotShadow: false,
         type: "pie",
@@ -63,9 +63,9 @@ class ActivesStatusController {
     });
 
   public get statusCount() {
-    return activesStore.actives.reduce(
-      (acc: Record<Status, number>, active) => {
-        const status = active.status;
+    return assetsStore.assets.reduce(
+      (acc: Record<Status, number>, asset) => {
+        const status = asset.status;
         if (!acc[status]) {
           acc[status] = 0;
         }
@@ -88,13 +88,13 @@ class ActivesStatusController {
   }
 
   public handleResetFilters = () => {
-    activesStore.setFilter(undefined);
+    assetsStore.setFilter(undefined);
   };
 
   public get hasFiltersActive() {
-    return !!activesStore.filterByStatus;
+    return !!assetsStore.filterByStatus;
   }
 }
 
-const controller = new ActivesStatusController();
+const controller = new AssetsStatusController();
 export default controller;

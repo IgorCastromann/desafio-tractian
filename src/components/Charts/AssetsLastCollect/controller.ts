@@ -1,7 +1,7 @@
 import userStore from "@src/store/user";
 import { formattDateDiffToString, getDateDiff } from "@src/utils/date";
 
-class ActivesLastCollectController {
+class AssetsLastCollectController {
   public joinUserNames = (ids: number[]) => {
     const names: string[] = [];
     ids.map((id) => {
@@ -16,5 +16,5 @@ class ActivesLastCollectController {
     formattDateDiffToString(getDateDiff(new Date(stringDate)));
 }
 
-const controller = new ActivesLastCollectController();
+const controller = new AssetsLastCollectController();
 export default controller;

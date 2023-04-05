@@ -1,10 +1,10 @@
-import { Active } from "@src/services/types";
-import { buildDefaultHighChartsActivesOption } from "@src/utils/chart";
+import { Asset } from "@src/services/types";
+import { buildDefaultHighChartsAssetsOption } from "@src/utils/chart";
 import { SeriesOptionsType } from "highcharts";
 
-class ActivesRPM {
-  public buildOptions = (actives: Active[]) =>
-    buildDefaultHighChartsActivesOption({
+class AssetsRPM {
+  public buildOptions = (assets: Asset[]) =>
+    buildDefaultHighChartsAssetsOption({
       tooltip: {
         headerFormat: "<span>{series.name}</span><br>",
         pointFormat:
@@ -14,10 +14,10 @@ class ActivesRPM {
         {
           name: "Ativos",
           colorByPoint: true,
-          data: actives.map((active) => {
+          data: assets.map((asset) => {
             return {
-              name: active.name,
-              y: active.specifications.rpm ?? 0,
+              name: asset.name,
+              y: asset.specifications.rpm ?? 0,
             };
           }),
         },
@@ -34,5 +34,5 @@ class ActivesRPM {
     });
 }
 
-const controller = new ActivesRPM();
+const controller = new AssetsRPM();
 export default controller;

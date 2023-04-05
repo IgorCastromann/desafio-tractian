@@ -1,14 +1,14 @@
-import { Active } from "./types";
+import { Asset } from "./types";
 
 // TODO move to .env
 const BASE_URL = "https://my-json-server.typicode.com/tractian/fake-api";
 
 export class AnalysesService {
-  public fetchActives = async (): Promise<Active[]> => {
+  public fetchAssets = async (): Promise<Asset[]> => {
     const response = await fetch(`${BASE_URL}/assets`);
-    const actives = await response.json();
+    const assets = await response.json();
 
-    return actives;
+    return assets;
   };
 
   public fetchUsers = async () => {

@@ -1,18 +1,18 @@
-import { Active } from "@src/services/types";
-import { buildDefaultHighChartsActivesOption } from "@src/utils/chart";
+import { Asset } from "@src/services/types";
+import { buildDefaultHighChartsAssetsOption } from "@src/utils/chart";
 import { SeriesOptionsType } from "highcharts";
 
-class ActivesHealthController {
-  public buildOptions = (actives: Active[]) =>
-    buildDefaultHighChartsActivesOption({
+class AssetsHealthController {
+  public buildOptions = (assets: Asset[]) =>
+    buildDefaultHighChartsAssetsOption({
       series: [
         {
           name: "Ativos",
           colorByPoint: true,
-          data: actives.map((active) => {
+          data: assets.map((asset) => {
             return {
-              name: active.name,
-              y: active.healthscore,
+              name: asset.name,
+              y: asset.healthscore,
             };
           }),
         },
@@ -42,5 +42,5 @@ class ActivesHealthController {
     });
 }
 
-const controller = new ActivesHealthController();
+const controller = new AssetsHealthController();
 export default controller;

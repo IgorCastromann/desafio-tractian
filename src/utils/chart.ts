@@ -1,6 +1,6 @@
 import * as Highcharts from "highcharts";
 
-export const buildDefaultHighChartsActivesOption = ({
+export const buildDefaultHighChartsAssetsOption = ({
   ...rest
 }: Partial<Highcharts.Options>): Highcharts.Options => ({
   ...defaultOptions,

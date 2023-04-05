@@ -1,4 +1,4 @@
-import { Active, Status } from "@src/services/types";
+import { Asset, Status } from "@src/services/types";
 import { useMemo } from "react";
 import controller from "./controller";
 import { Button, Card, Tooltip } from "antd";
@@ -7,24 +7,24 @@ import { GenericChart } from "../GenericChart";
 import styles from "./styles.module.scss";
 import { observer } from "mobx-react-lite";
 
-interface ActivesStatus {
-  actives: Active[];
+interface AssetsStatus {
+  assets: Asset[];
 }
-export const ActivesStatus = observer(({ actives }: ActivesStatus) => {
+export const AssetsStatus = observer(({ assets }: AssetsStatus) => {
   const options = useMemo(
     () => controller.buildOptions(controller.formattedData),
-    [actives]
+    [assets]
   );
 
   return (
     <Card bodyStyle={{ padding: "0" }}>
       <Card.Meta
         description={
-          <section className={styles["health-active-section"]}>
-            <div className={styles["health-active-section__graph"]}>
+          <section className={styles["health-asset-section"]}>
+            <div className={styles["health-asset-section__graph"]}>
               <GenericChart options={options} />
             </div>
-            <div className={styles["health-active-section__details"]}>
+            <div className={styles["health-asset-section__details"]}>
               {Object.entries(controller.statusCount).map(([res], idx) => (
                 <StatusCard status={res as Status} key={idx} />
               ))}
