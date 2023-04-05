@@ -55,4 +55,7 @@ const defaultOptions: Highcharts.Options = {
   legend: {
     enabled: false,
   },
+  exporting: {
+    enabled: true,
+  },
 };

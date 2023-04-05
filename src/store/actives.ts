@@ -4,6 +4,7 @@ import { makeAutoObservable } from "mobx";
 
 class ActivesStore {
   public actives: Active[] = [];
+  public filterByStatus: Status | undefined;
 
   // eslint-disable-next-line no-unused-vars
   public constructor(private analysesService = new AnalysesService()) {
@@ -23,6 +24,17 @@ class ActivesStore {
 
     return totalByStatus;
   };
+
+  public setFilter = (status: Status | undefined) => {
+    console.log("clickou", status);
+    this.filterByStatus = status;
+  };
+
+  public get filteredActives() {
+    return this.filterByStatus
+      ? this.actives.filter(({ status }) => status === this.filterByStatus)
+      : this.actives;
+  }
 
   private setActives = (actives: Active[]) => {
     this.actives = actives;

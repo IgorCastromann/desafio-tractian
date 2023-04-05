@@ -1,6 +1,7 @@
 .sidebar {
   overflow-x: hidden;
   background: #1e3a8a !important;
+  min-height: 100vh;
 
   &__content {
     display: flex;
@@ -23,5 +24,9 @@
 
   &__text {
     color: white;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

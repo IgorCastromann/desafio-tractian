@@ -15,7 +15,7 @@ export interface Active {
 }
 
 export interface HealthHistory {
-  status: Status;
+  status: HealthStatus;
   timestamp: string;
 }
 
@@ -27,6 +27,18 @@ export interface Metrics {
 
 export interface Specifications {
   maxTemp: number;
+  power?: number;
+  rpm?: number;
 }
 
 export type Status = "inAlert" | "inOperation" | "inDowntime";
+
+export type HealthStatus = Status | "plannedStop" | "unplannedStop";
+
+export const trantatedHealthStatus: Record<HealthStatus, string> = {
+  inAlert: "Em Alerta",
+  inDowntime: "Em Parada",
+  inOperation: "Em Operação",
+  plannedStop: "Parada Planejada",
+  unplannedStop: "Parada Não Planejada",
+};
