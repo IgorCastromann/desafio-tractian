@@ -10,12 +10,12 @@ export const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
     <Space direction="vertical" className={styles.container}>
       <Layout>
-        {/* // TODO Implement filter in the future */}
-        {/* <Layout.Header className={styles["ant-layout-header"]}>
-          <></>
-        </Layout.Header> */}
+        <Menu />
         <Layout>
-          <Menu />
+          {/* // TODO Implement filter in the future */}
+          {/* <Layout.Header className={styles["ant-layout-header"]}>
+            <></>
+          </Layout.Header> */}
           <Layout.Content>
             <div className={styles.content}>{children}</div>
           </Layout.Content>

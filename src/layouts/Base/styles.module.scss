@@ -3,10 +3,6 @@
   filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.06));
 }
 
-.ant-layout-sider {
-  background: #5c43e5 !important;
-}
-
 .ant-divider {
   padding: 0 24px;
   width: 80% !important;
@@ -19,6 +15,11 @@
 
 .ant-layout {
   height: 100vh;
+  max-width: 100rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -27,12 +28,21 @@
 }
 
 .container {
-  height: 100%;
+  height: 100vh; // TODO use calc to subtract the header height
   overflow: hidden;
   width: 100%;
 }
 
 .content {
-  background: white;
-  min-height: 100%;
+  background: #f3f3f3;
+  height: 100vh;
+
+  overflow-y: scroll;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
