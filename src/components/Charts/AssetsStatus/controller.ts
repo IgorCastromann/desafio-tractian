@@ -15,7 +15,7 @@ class AssetsStatusController {
         plotShadow: false,
         type: "pie",
         backgroundColor: "white",
-        borderRadius: 12,
+        borderRadius: 8,
         width: 400,
         height: 390,
       },

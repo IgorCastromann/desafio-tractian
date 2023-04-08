@@ -36,7 +36,7 @@ const defaultOptions: Highcharts.Options = {
   chart: {
     type: "column",
     backgroundColor: "white",
-    borderRadius: 12,
+    borderRadius: 8,
   },
   accessibility: {
     announceNewData: {
@@ -55,6 +55,9 @@ const defaultOptions: Highcharts.Options = {
   exporting: {
     enabled: true,
   },
+  credits: {
+    enabled: false,
+  },
 };
 
 export const buildDefaultGaugeHighChartsAssetsOption = ({
@@ -68,8 +71,9 @@ const defaultGaugeOptions: Highcharts.Options = {
   chart: {
     backgroundColor: "white",
     type: "solidgauge",
-    width: 300,
+    width: 350,
     height: 200,
+    borderRadius: 8,
   },
   title: undefined,
   credits: {
