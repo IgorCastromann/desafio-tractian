@@ -48,11 +48,29 @@ export class AnalysesService {
     return companies;
   };
 
+  public deleteCompany = async (id: number) => {
+    const response = await fetch(`${BASE_URL}/companies/${id}`, {
+      method: "DELETE",
+    });
+    const company = await response.json();
+
+    return company;
+  };
+
   public fetchUnits = async () => {
     const response = await fetch(`${BASE_URL}/units`);
     const units = await response.json();
 
     return units;
+  };
+
+  public deleteUnit = async (id: number) => {
+    const response = await fetch(`${BASE_URL}/units/${id}`, {
+      method: "DELETE",
+    });
+    const unit = await response.json();
+
+    return unit;
   };
 
   public fetchWorkOrders = async () => {
