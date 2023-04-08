@@ -1,6 +1,8 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { BaseLayout } from "@src/layouts/Base";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallback } from "@src/components/Error";
 
 const Dashboard = lazy(() => import("@src/pages/Dashboard"));
 const Users = lazy(() => import("@src/pages/Users"));
@@ -13,11 +15,13 @@ export const Routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      <BaseLayout>
-        <Suspense fallback={"carregando..."}>
-          <Outlet />
-        </Suspense>
-      </BaseLayout>
+      <ErrorBoundary fallback={<ErrorFallback />}>
+        <BaseLayout>
+          <Suspense fallback={"carregando..."}>
+            <Outlet />
+          </Suspense>
+        </BaseLayout>
+      </ErrorBoundary>
     ),
     children: [
       {
