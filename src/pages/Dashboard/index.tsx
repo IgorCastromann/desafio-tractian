@@ -3,7 +3,6 @@ import styles from "./styles.module.scss";
 import assetsStore from "@src/store/assets";
 import { observer } from "mobx-react-lite";
 
-import { Typography } from "antd";
 import userStore from "@src/store/user";
 import { AssetsLastCollect } from "@src/components/Charts/AssetsLastCollect";
 import { AssetsCollects } from "@src/components/Charts/AssetsCollects";
@@ -19,20 +18,14 @@ const Dashboard = observer(() => {
   }, []);
 
   return (
-    <>
-      <Typography.Title level={3} style={{ alignSelf: "start" }}>
-        Dashboard
-      </Typography.Title>
-
-      <section className={styles["section-graphs"]}>
-        <AssetsStatus assets={assetsStore.filteredAssets} />
-        <AssetsHealth assets={assetsStore.filteredAssets} />
-        <AssetsRPM assets={assetsStore.filteredAssets} />
-        <AssetsPower assets={assetsStore.filteredAssets} />
-        <AssetsCollects assets={assetsStore.filteredAssets} />
-        <AssetsLastCollect assets={assetsStore.filteredAssets} />
-      </section>
-    </>
+    <section className={styles["section-graphs"]}>
+      <AssetsStatus assets={assetsStore.filteredAssets} />
+      <AssetsHealth assets={assetsStore.filteredAssets} />
+      <AssetsRPM assets={assetsStore.filteredAssets} />
+      <AssetsPower assets={assetsStore.filteredAssets} />
+      <AssetsCollects assets={assetsStore.filteredAssets} />
+      <AssetsLastCollect assets={assetsStore.filteredAssets} />
+    </section>
   );
 });
 
