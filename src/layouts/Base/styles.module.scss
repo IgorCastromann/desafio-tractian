@@ -29,20 +29,16 @@
 
 .container {
   height: 100vh; // TODO use calc to subtract the header height
-  overflow: hidden;
   width: 100%;
 }
 
 .content {
   background: #f3f3f3;
-  height: 100vh;
-
-  overflow-y: scroll;
 
   padding: 2rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }

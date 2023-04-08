@@ -1,4 +1,4 @@
-import { trantatedHealthStatus } from "@src/services/types/assets";
+import { translatedHealthStatus } from "@src/services/types/assets";
 import { HealthStatus, Status } from "@src/services/types";
 import assetsStore from "@src/store/assets";
 import { buildDefaultHighChartsAssetsOption } from "@src/utils/chart";
@@ -82,7 +82,7 @@ class AssetsStatusController {
 
   public get formattedData() {
     return Object.entries(this.statusCount).map(([status, y]) => ({
-      name: trantatedHealthStatus[status as HealthStatus],
+      name: translatedHealthStatus[status as HealthStatus],
       y,
     }));
   }

@@ -11,9 +11,6 @@ const defaultOptions: Highcharts.Options = {
   title: {
     text: "",
   },
-  subtitle: {
-    text: "",
-  },
   xAxis: {
     type: "category",
   },
