@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+
+  gap: 2rem;
+}
+.content {
+  background: #f3f3f3;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}

@@ -5,6 +5,7 @@ import { BaseLayout } from "@src/layouts/Base";
 const Dashboard = lazy(() => import("@src/pages/Dashboard"));
 const Users = lazy(() => import("@src/pages/Users"));
 const Assets = lazy(() => import("@src/pages/Assets"));
+const AssetsDetails = lazy(() => import("@src/pages/Assets/Details"));
 const Companies = lazy(() => import("@src/pages/Companies"));
 const Units = lazy(() => import("@src/pages/Units"));
 
@@ -29,7 +30,17 @@ export const Routes = createBrowserRouter([
       },
       {
         path: "/assets",
-        element: <Assets />,
+        element: <Outlet />,
+        children: [
+          {
+            path: "",
+            element: <Assets />,
+          },
+          {
+            path: ":id",
+            element: <AssetsDetails />,
+          },
+        ],
       },
       {
         path: "/companies",
