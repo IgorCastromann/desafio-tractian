@@ -1,6 +1,13 @@
+$header-height: 5vh;
+
 .ant-layout-header {
   background: #1e3a8a !important;
-  filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.06));
+  height: $header-height;
+
+  display: flex;
+  align-items: center;
+
+  padding: 2rem;
 }
 
 .ant-divider {
@@ -28,7 +35,7 @@
 }
 
 .container {
-  height: 100vh; // TODO use calc to subtract the header height
+  height: calc(100vh - $header-height);
   width: 100%;
 }
 
