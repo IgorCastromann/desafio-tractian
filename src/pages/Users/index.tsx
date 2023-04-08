@@ -11,14 +11,12 @@ const Users = () => {
   }, []);
 
   return (
-    <>
-      <Table
-        columns={buildColumns()}
-        dataSource={userStore.users}
-        rowKey="email"
-        style={{ width: "100%", maxWidth: "1400px" }}
-      />
-    </>
+    <Table
+      columns={buildColumns()}
+      dataSource={userStore.users}
+      rowKey="email"
+      style={{ width: "100%", maxWidth: "1400px" }}
+    />
   );
 };
 
