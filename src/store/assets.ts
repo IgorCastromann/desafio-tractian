@@ -4,6 +4,7 @@ import { makeAutoObservable } from "mobx";
 
 class AssetsStore {
   public assets: Asset[] = [];
+  public selectedAsset: Asset | undefined;
   public filterByStatus: Status | undefined;
 
   // eslint-disable-next-line no-unused-vars
@@ -17,6 +18,15 @@ class AssetsStore {
     this.setAssets(assets);
   };
 
+  public fetchAssetById = async (id: number) => {
+    const asset = await this.analysesService.fetchAssetById(id);
+
+    this.setSelectedAsset(asset);
+  };
+
+  public getAssetById = (id: number) =>
+    this.assets.find((asset) => asset.id === id);
+
   public getTotalByStatus = (status: Status) => {
     const totalByStatus = this.assets.filter(
       (asset) => asset.status === status
@@ -25,10 +35,8 @@ class AssetsStore {
     return totalByStatus;
   };
 
-  public setFilter = (status: Status | undefined) => {
-    console.log("clickou", status);
-    this.filterByStatus = status;
-  };
+  public setFilter = (status: Status | undefined) =>
+    (this.filterByStatus = status);
 
   public get filteredAssets() {
     return this.filterByStatus
@@ -36,9 +44,9 @@ class AssetsStore {
       : this.assets;
   }
 
-  private setAssets = (assets: Asset[]) => {
-    this.assets = assets;
-  };
+  private setAssets = (assets: Asset[]) => (this.assets = assets);
+
+  private setSelectedAsset = (asset: Asset) => (this.selectedAsset = asset);
 }
 
 const assetsStore = new AssetsStore();

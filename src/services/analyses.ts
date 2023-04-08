@@ -11,6 +11,13 @@ export class AnalysesService {
     return assets;
   };
 
+  public fetchAssetById = async (id: number): Promise<Asset> => {
+    const response = await fetch(`${BASE_URL}/assets/${id}`);
+    const asset = await response.json();
+
+    return asset;
+  };
+
   public fetchUsers = async () => {
     const response = await fetch(`${BASE_URL}/users`);
     const users = await response.json();
