@@ -1,7 +1,6 @@
 import { Asset } from "./types";
 
-// TODO move to .env
-const BASE_URL = "https://my-json-server.typicode.com/tractian/fake-api";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export class AnalysesService {
   public fetchAssets = async (): Promise<Asset[]> => {
