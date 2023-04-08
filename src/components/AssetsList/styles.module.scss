@@ -1,0 +1,19 @@
+.list-item {
+  padding: 1rem !important;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  .div:first-of-type {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+.icons-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-left: -24px;
+}
