@@ -36,6 +36,12 @@ export const buildColumns = (): ColumnsType<User> => [
     align: "right",
     render: (_, user) => (
       <Space size="small">
+        <Button
+          type="link"
+          onClick={() => controller.handleOpenEditModal(user.id)}
+        >
+          Editar
+        </Button>
         <Popconfirm
           title={`Deseja mesmo deletar o usuário ${user.name}?`}
           description="Uma vez deletado, você não poderá voltar atrás!"
