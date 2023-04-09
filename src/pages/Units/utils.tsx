@@ -24,6 +24,12 @@ export const buildColumns = (): ColumnsType<Unit> => [
     align: "right",
     render: (_, unit) => (
       <Space size="small">
+        <Button
+          type="link"
+          onClick={() => controller.handleOpenEditModal(unit.id)}
+        >
+          Editar
+        </Button>
         <Popconfirm
           title={`Deseja mesmo deletar a unidade ${unit.name}?`}
           description="Uma vez deletada, você não poderá voltar atrás!"
