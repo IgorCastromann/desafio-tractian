@@ -62,52 +62,68 @@ $ yarn
 $ yarn dev
 ```
 
-### Pages
+## Pages
 
-#### **Home/Dashboard -** The general information over actives, with a filter by status.
+## **Home/Dashboard -** The general information over actives, with a filter by status.
 
-#### above 2k pixels
+### above 2k pixels
 
 ![Screenshot 2023-04-09 at 11 28 20](https://user-images.githubusercontent.com/66645319/230778577-88a8263f-3b03-4960-b9bd-b2ce9438f53d.png)
 
-#### below 2k pixels
+### below 2k pixels
 
 ![Screenshot 2023-04-09 at 11 28 57](https://user-images.githubusercontent.com/66645319/230778616-b531d189-eb48-468b-af2f-8e606bef8d44.png)
 
-#### with active status filter
+### with active status filter
 
 ![Screenshot 2023-04-09 at 11 29 48](https://user-images.githubusercontent.com/66645319/230778676-5686ceb4-9342-49f5-b90f-a596736aaa77.png)
 
-#### **Assets -** Assets list with critical informations.
+## **Assets -** Assets list with critical informations.
 
 ![Screenshot 2023-04-09 at 11 31 19](https://user-images.githubusercontent.com/66645319/230778765-7e30f3f8-2220-42c5-af46-f462efeea492.png)
 
-#### **Assets details-** detailed information about a specific asset.
+### **Assets details-** detailed information about a specific asset.
 
-#### example with all infos
+### example with all infos
 
-![Screenshot 2023-04-09 at 11 30 46](https://user-images.githubusercontent.com/66645319/230778731-dd26a847-846b-496e-b671-2fc0c19e96d7.png)
+![Screenshot 2023-04-09 at 14 28 48](https://user-images.githubusercontent.com/66645319/230787372-963ffcac-7069-4388-b941-783a1cfb4178.png)
 
-#### example without power
+### example without power
 
-![Screenshot 2023-04-09 at 11 31 05](https://user-images.githubusercontent.com/66645319/230778756-ab5473e7-a2a6-4396-96bb-43a5ecedc804.png)
+![Screenshot 2023-04-09 at 14 29 16](https://user-images.githubusercontent.com/66645319/230787395-00328fe8-fd74-4e56-be58-56c63c986c2c.png)
 
-#### **Units -** Units list in form of a table.
+### edit modal example
 
-![Screenshot 2023-04-09 at 11 32 13](https://user-images.githubusercontent.com/66645319/230778818-d447433a-dbe3-403a-861d-2441c0a14924.png)
+![Screenshot 2023-04-09 at 14 29 42](https://user-images.githubusercontent.com/66645319/230787412-adf6315d-4700-4f1e-aab7-15f42be2c8d3.png)
 
-#### **Companies -** Companies list in form of a table.
+## **Units -** Units list in form of a table.
 
-![Screenshot 2023-04-09 at 11 32 28](https://user-images.githubusercontent.com/66645319/230778836-1512837d-3c61-4f64-ac0e-d4acf3c43f99.png)
+![Screenshot 2023-04-09 at 14 30 05](https://user-images.githubusercontent.com/66645319/230787429-b02709bf-8080-4e38-b3fd-e9e8eeb5f71e.png)
 
-#### **Users -** Users list in form of a table.
+### edit modal example
 
-![Screenshot 2023-04-09 at 11 32 41](https://user-images.githubusercontent.com/66645319/230778855-75f78a14-f7f9-4cfc-8ba6-b3e8cb86ce9f.png)
+![Screenshot 2023-04-09 at 14 30 16](https://user-images.githubusercontent.com/66645319/230787440-584c6361-d566-408a-8059-6cdc01d2a883.png)
 
-#### **Work Orders -** Work orders list in for of a table.
+## **Companies -** Companies list in form of a table.
+
+![Screenshot 2023-04-09 at 14 31 07](https://user-images.githubusercontent.com/66645319/230787473-fc1b359c-f0a2-4f79-83c1-7032491fbcf1.png)
+
+### edit modal example
+
+![Screenshot 2023-04-09 at 14 31 19](https://user-images.githubusercontent.com/66645319/230787482-73939576-43df-4b4d-8765-68a7ac115a8b.png)
+
+## **Users -** Users list in form of a table.
+
+![Screenshot 2023-04-09 at 14 31 38](https://user-images.githubusercontent.com/66645319/230787495-1312af9f-0b1c-4450-8acb-70549387e795.png)
+
+### edit modal example
+
+![Screenshot 2023-04-09 at 14 31 51](https://user-images.githubusercontent.com/66645319/230787510-9d6c6d68-35f5-4188-bc8e-f8278e57fba4.png)
+
+## **Work Orders -** Work orders list in for of a table.
 
 ![Screenshot 2023-04-09 at 11 33 37](https://user-images.githubusercontent.com/66645319/230778908-69de63ac-e36e-4955-86b5-3d391e2fbf1c.png)
 
-#### Work orders modal
+### Work orders modal
 
 ![Screenshot 2023-04-09 at 11 35 28](https://user-images.githubusercontent.com/66645319/230778987-cfc32e31-b36e-494a-a21c-174a51bcf628.png)
