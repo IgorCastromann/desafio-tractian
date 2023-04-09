@@ -19,7 +19,7 @@ const WorkOrders = () => {
         style={{ width: "100%", maxWidth: "1400px" }}
       />
       <Modal
-        title="Checkup"
+        title={controller.selectedWorkOrder?.title}
         open={controller.isModalOpen}
         onOk={() => controller.setModalVisibility(false)}
         cancelButtonProps={{ style: { display: "none" } }}

@@ -68,34 +68,46 @@ $ yarn dev
 
 #### above 2k pixels
 
-![Screenshot 2023-04-09 at 10 25 52](https://user-images.githubusercontent.com/66645319/230775406-2bde2205-de85-471f-a1c9-304dd870ad3c.png)
+![Screenshot 2023-04-09 at 11 28 20](https://user-images.githubusercontent.com/66645319/230778577-88a8263f-3b03-4960-b9bd-b2ce9438f53d.png)
 
 #### below 2k pixels
 
-![Screenshot 2023-04-09 at 10 25 00](https://user-images.githubusercontent.com/66645319/230775358-8c095acf-38ed-4e20-8956-81d8c70e5c58.png)
+![Screenshot 2023-04-09 at 11 28 57](https://user-images.githubusercontent.com/66645319/230778616-b531d189-eb48-468b-af2f-8e606bef8d44.png)
+
+#### with active status filter
+
+![Screenshot 2023-04-09 at 11 29 48](https://user-images.githubusercontent.com/66645319/230778676-5686ceb4-9342-49f5-b90f-a596736aaa77.png)
 
 #### **Assets -** Assets list with critical informations.
 
-![Screenshot 2023-04-09 at 10 26 19](https://user-images.githubusercontent.com/66645319/230775436-47556360-af2f-4ce9-bd99-ee9c1d499665.png)
+![Screenshot 2023-04-09 at 11 31 19](https://user-images.githubusercontent.com/66645319/230778765-7e30f3f8-2220-42c5-af46-f462efeea492.png)
 
 #### **Assets details-** detailed information about a specific asset.
 
 #### example with all infos
 
-![Screenshot 2023-04-09 at 10 26 43](https://user-images.githubusercontent.com/66645319/230775459-71d2809d-88c9-4f73-896d-7fb6237283a1.png)
+![Screenshot 2023-04-09 at 11 30 46](https://user-images.githubusercontent.com/66645319/230778731-dd26a847-846b-496e-b671-2fc0c19e96d7.png)
 
 #### example without power
 
-![Screenshot 2023-04-09 at 10 27 31](https://user-images.githubusercontent.com/66645319/230775494-4e6149a7-e819-4354-8f03-bf19cbf69faf.png)
+![Screenshot 2023-04-09 at 11 31 05](https://user-images.githubusercontent.com/66645319/230778756-ab5473e7-a2a6-4396-96bb-43a5ecedc804.png)
 
 #### **Units -** Units list in form of a table.
 
-![Screenshot 2023-04-09 at 10 27 49](https://user-images.githubusercontent.com/66645319/230775508-f670f330-bb70-4196-b226-6fec29eb8d2f.png)
+![Screenshot 2023-04-09 at 11 32 13](https://user-images.githubusercontent.com/66645319/230778818-d447433a-dbe3-403a-861d-2441c0a14924.png)
 
 #### **Companies -** Companies list in form of a table.
 
-![Screenshot 2023-04-09 at 10 28 06](https://user-images.githubusercontent.com/66645319/230775525-e8362a18-ff30-4984-a0d8-bf49ecd0a4a3.png)
+![Screenshot 2023-04-09 at 11 32 28](https://user-images.githubusercontent.com/66645319/230778836-1512837d-3c61-4f64-ac0e-d4acf3c43f99.png)
 
 #### **Users -** Users list in form of a table.
 
-![Screenshot 2023-04-09 at 10 28 18](https://user-images.githubusercontent.com/66645319/230775532-fe54c6e1-1559-4c14-8922-df9b1ec50909.png)
+![Screenshot 2023-04-09 at 11 32 41](https://user-images.githubusercontent.com/66645319/230778855-75f78a14-f7f9-4cfc-8ba6-b3e8cb86ce9f.png)
+
+#### **Work Orders -** Work orders list in for of a table.
+
+![Screenshot 2023-04-09 at 11 33 37](https://user-images.githubusercontent.com/66645319/230778908-69de63ac-e36e-4955-86b5-3d391e2fbf1c.png)
+
+#### Work orders modal
+
+![Screenshot 2023-04-09 at 11 35 28](https://user-images.githubusercontent.com/66645319/230778987-cfc32e31-b36e-494a-a21c-174a51bcf628.png)
