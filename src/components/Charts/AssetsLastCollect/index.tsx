@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import styles from "./styles.module.scss";
 import { Typography } from "antd";
 import controller from "./controller";
+import { joinUserNames } from "@src/utils/helpers";
 
 export interface AssetsLastCollectProp {
   assets: Asset[];
@@ -31,7 +32,7 @@ export const AssetsLastCollect = observer(
                   tooltip: true,
                 }}
               >
-                {controller.joinUserNames(asset.assignedUserIds)}
+                {joinUserNames(asset.assignedUserIds)}
               </Typography.Text>
             </div>
           );

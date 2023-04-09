@@ -32,6 +32,7 @@ import { AssetsRPMGauge } from "@src/components/Charts/AssetsRPMGauge";
 import { StatusByHourChart } from "@src/components/Charts/AssetsStatusByHour";
 import { AssetsHealthHistory } from "@src/components/Charts/AssetsHealthHistory";
 import controller from "./controller";
+import { joinUserNames } from "@src/utils/helpers";
 
 const AssetsDetails = () => {
   const { id } = useParams();
@@ -258,7 +259,7 @@ const Header = ({ asset }: HeaderProps) => (
     <CardInfo
       icon={<TeamOutlined />}
       title="Responsáveis"
-      value={controller.joinUserNames(asset.assignedUserIds)}
+      value={joinUserNames(asset.assignedUserIds)}
     />
   </Space>
 );
