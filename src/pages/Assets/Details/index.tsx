@@ -23,11 +23,8 @@ import {
   healthStatusColor,
   translatedHealthStatus,
 } from "@src/services/types";
-import userStore from "@src/store/user";
 import { ReactNode, useEffect } from "react";
 
-import companiesStore from "@src/store/companies";
-import unitsStore from "@src/store/units";
 import { AssetsPowerGauge } from "@src/components/Charts/AssetsPowerGauge";
 import { AssetsRPMGauge } from "@src/components/Charts/AssetsRPMGauge";
 import { StatusByHourChart } from "@src/components/Charts/AssetsStatusByHour";
@@ -40,12 +37,7 @@ const AssetsDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    assetsStore.fetchAssets().then(() => {
-      setTimeout(() => window.dispatchEvent(new Event("resize"))); // resize chart with data
-    });
-    userStore.fetchUsers();
-    unitsStore.fetchUnits();
-    companiesStore.fetchCompanies();
+    controller.fetchData();
   }, []);
 
   const asset = assetsStore.getAssetById(Number(id));

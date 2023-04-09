@@ -2,6 +2,7 @@ import { Asset } from "@src/services/types";
 import assetsStore from "@src/store/assets";
 import companiesStore from "@src/store/companies";
 import unitsStore from "@src/store/units";
+import userStore from "@src/store/user";
 import { message } from "antd";
 import { makeAutoObservable } from "mobx";
 
@@ -11,6 +12,16 @@ class DetailsController {
   public constructor() {
     makeAutoObservable(this);
   }
+
+  public fetchData = () => {
+    assetsStore.fetchAssets().then(() => {
+      setTimeout(() => window.dispatchEvent(new Event("resize"))); // resize chart with data
+    });
+    userStore.fetchUsers();
+    unitsStore.fetchUnits();
+    companiesStore.fetchCompanies();
+  };
+
   public getUnitById = (id: number) => unitsStore.getUnitById(id)?.name ?? "";
   public getCompanyById = (id: number) =>
     companiesStore.getCompanyById(id)?.name ?? "";
