@@ -15,6 +15,12 @@ export const buildColumns = (): ColumnsType<Company> => [
     align: "right",
     render: (_, company) => (
       <Space size="small">
+        <Button
+          type="link"
+          onClick={() => controller.handleOpenEditModal(company.id)}
+        >
+          Editar
+        </Button>
         <Popconfirm
           title={`Deseja mesmo deletar a empresa ${company.name}?`}
           description="Uma vez deletada, você não poderá voltar atrás!"

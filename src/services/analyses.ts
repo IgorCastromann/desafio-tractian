@@ -1,4 +1,4 @@
-import { Asset, User } from "./types";
+import { Asset, Company, Unit, User } from "./types";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -67,6 +67,16 @@ export class AnalysesService {
     return companies;
   };
 
+  public updateCompany = async (id: number, company: Company) => {
+    const response = await fetch(`${BASE_URL}/companies/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ company }),
+    });
+    const updatedCompanies = await response.json();
+
+    return updatedCompanies;
+  };
+
   public deleteCompany = async (id: number) => {
     const response = await fetch(`${BASE_URL}/companies/${id}`, {
       method: "DELETE",
@@ -81,6 +91,16 @@ export class AnalysesService {
     const units = await response.json();
 
     return units;
+  };
+
+  public updateUnit = async (id: number, unit: Unit) => {
+    const response = await fetch(`${BASE_URL}/units/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ unit }),
+    });
+    const updatedUnit = await response.json();
+
+    return updatedUnit;
   };
 
   public deleteUnit = async (id: number) => {
