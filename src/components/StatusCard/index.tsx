@@ -1,5 +1,5 @@
 import { Status } from "@src/services/types";
-import { Typography } from "antd";
+import { Space, Typography } from "antd";
 import styles from "./styles.module.scss";
 import assetsStore from "@src/store/assets";
 import { infoByStatus } from "./utils";
@@ -10,11 +10,18 @@ interface StatusCardProps {
 }
 export const StatusCard = observer(({ status }: StatusCardProps) => {
   const { icon, title, type } = infoByStatus[status];
+  const hasSelection = assetsStore.filterByStatus;
   const isSelected = assetsStore.filterByStatus === status;
 
   return (
-    <div
-      className={`${styles.card} ${isSelected ? styles.selected : ""}`}
+    <Space
+      className={`${styles.card} ${
+        hasSelection
+          ? isSelected
+            ? styles.selected
+            : styles["not-selected"]
+          : ""
+      }`}
       onClick={() => assetsStore.setFilter(status)}
     >
       <Typography.Title level={5} type={type}>
@@ -23,6 +30,6 @@ export const StatusCard = observer(({ status }: StatusCardProps) => {
       <Typography.Title level={1} type={type}>
         {assetsStore.getTotalByStatus(status)}
       </Typography.Title>
-    </div>
+    </Space>
   );
 });
