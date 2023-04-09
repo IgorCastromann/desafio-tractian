@@ -25,7 +25,7 @@ class UsersController {
   public onFinish = async (updatedUser: User) => {
     try {
       await userStore.updateUser({ ...userStore.selectedUser, ...updatedUser });
-      message.success("Ativo atualizado com sucesso!");
+      message.success("Usuário atualizado com sucesso!");
       this.setModalVisibility(false);
     } catch (error) {
       message.error("Ops! houve uma falha, tente novamente mais tarde!");
