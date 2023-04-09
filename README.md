@@ -62,16 +62,40 @@ $ yarn
 $ yarn dev
 ```
 
-## Screens
+### Pages
 
-**Home/Dashboard -** The general information over actives, with a filter by status.
+#### **Home/Dashboard -** The general information over actives, with a filter by status.
 
-**Assets -** Assets list with critical informations.
+#### above 2k pixels
 
-**Assets details-** detailed information about a specific asset.
+![Screenshot 2023-04-09 at 10 25 52](https://user-images.githubusercontent.com/66645319/230775406-2bde2205-de85-471f-a1c9-304dd870ad3c.png)
 
-**Units -** Units list in form of a table.
+#### below 2k pixels
 
-**Companies -** Companies list in form of a table.
+![Screenshot 2023-04-09 at 10 25 00](https://user-images.githubusercontent.com/66645319/230775358-8c095acf-38ed-4e20-8956-81d8c70e5c58.png)
 
-**Users -** Users list in form of a table.
+#### **Assets -** Assets list with critical informations.
+
+![Screenshot 2023-04-09 at 10 26 19](https://user-images.githubusercontent.com/66645319/230775436-47556360-af2f-4ce9-bd99-ee9c1d499665.png)
+
+#### **Assets details-** detailed information about a specific asset.
+
+#### example with all infos
+
+![Screenshot 2023-04-09 at 10 26 43](https://user-images.githubusercontent.com/66645319/230775459-71d2809d-88c9-4f73-896d-7fb6237283a1.png)
+
+#### example without power
+
+![Screenshot 2023-04-09 at 10 27 31](https://user-images.githubusercontent.com/66645319/230775494-4e6149a7-e819-4354-8f03-bf19cbf69faf.png)
+
+#### **Units -** Units list in form of a table.
+
+![Screenshot 2023-04-09 at 10 27 49](https://user-images.githubusercontent.com/66645319/230775508-f670f330-bb70-4196-b226-6fec29eb8d2f.png)
+
+#### **Companies -** Companies list in form of a table.
+
+![Screenshot 2023-04-09 at 10 28 06](https://user-images.githubusercontent.com/66645319/230775525-e8362a18-ff30-4984-a0d8-bf49ecd0a4a3.png)
+
+#### **Users -** Users list in form of a table.
+
+![Screenshot 2023-04-09 at 10 28 18](https://user-images.githubusercontent.com/66645319/230775532-fe54c6e1-1559-4c14-8922-df9b1ec50909.png)
