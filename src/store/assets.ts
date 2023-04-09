@@ -18,12 +18,6 @@ class AssetsStore {
     this.setAssets(assets);
   };
 
-  public fetchAssetById = async (id: number) => {
-    const asset = await this.analysesService.fetchAssetById(id);
-
-    this.setSelectedAsset(asset);
-  };
-
   public getAssetById = (id: number) =>
     this.assets.find((asset) => asset.id === id);
 
@@ -44,9 +38,15 @@ class AssetsStore {
       : this.assets;
   }
 
-  private setAssets = (assets: Asset[]) => (this.assets = assets);
+  public setSelectedAsset = (id: number) =>
+    (this.selectedAsset = this.assets.find((asset) => asset.id === id));
 
-  private setSelectedAsset = (asset: Asset) => (this.selectedAsset = asset);
+  public updateAsset = (asset: Asset) => {
+    if (!this.selectedAsset) return;
+    this.analysesService.updateAsset(asset.id, asset);
+  };
+
+  private setAssets = (assets: Asset[]) => (this.assets = assets);
 }
 
 const assetsStore = new AssetsStore();

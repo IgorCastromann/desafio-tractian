@@ -8,6 +8,7 @@ import {
   BlockOutlined,
   CalendarOutlined,
   ClockCircleOutlined,
+  EditOutlined,
   FireOutlined,
   GlobalOutlined,
   HeartOutlined,
@@ -33,6 +34,7 @@ import { StatusByHourChart } from "@src/components/Charts/AssetsStatusByHour";
 import { AssetsHealthHistory } from "@src/components/Charts/AssetsHealthHistory";
 import controller from "./controller";
 import { joinUserNames } from "@src/utils/helpers";
+import { AssetsModal } from "@src/components/Modals/Assets";
 
 const AssetsDetails = () => {
   const { id } = useParams();
@@ -60,6 +62,11 @@ const AssetsDetails = () => {
           rpm={asset.specifications.rpm}
         />
       </div>
+      <AssetsModal
+        isModalOpen={controller.isModalOpen}
+        onCancel={() => controller.setModalVisibility(false)}
+        onFinish={controller.onFinish}
+      />
     </div>
   );
 };
@@ -122,7 +129,15 @@ const Sider = ({ asset }: SiderProps) => {
         style={{ objectFit: "scale-down", borderRadius: "8px" }}
         preview={false}
       />
-      <Typography.Title level={4}>{asset.name}</Typography.Title>
+      <Space align="baseline">
+        <Typography.Title level={4}>{asset.name}</Typography.Title>
+        <div
+          className={styles["edit-button"]}
+          onClick={() => controller.handleOpenEditModal(asset.id)}
+        >
+          <EditOutlined />
+        </div>
+      </Space>
       <List
         itemLayout="vertical"
         dataSource={[asset]}

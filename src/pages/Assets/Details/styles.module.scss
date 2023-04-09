@@ -13,3 +13,23 @@
   justify-content: start;
   align-items: center;
 }
+
+.edit-button {
+  background: #50ff4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.7;
+  }
+  svg {
+    margin-left: "3rem";
+    color: "black";
+  }
+}

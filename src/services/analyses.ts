@@ -17,6 +17,16 @@ export class AnalysesService {
     return asset;
   };
 
+  public updateAsset = async (id: number, asset: Asset) => {
+    const response = await fetch(`${BASE_URL}/users/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ asset }),
+    });
+    const updatedAsset = await response.json();
+
+    return updatedAsset;
+  };
+
   public fetchUsers = async () => {
     const response = await fetch(`${BASE_URL}/users`);
     const users = await response.json();
