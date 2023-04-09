@@ -13,4 +13,5 @@ const pathTitle = {
   "/units": "Unidades",
   "/companies": "Empresas",
   "/users": "Usuários",
+  "/workorders": "Ordens de serviço",
 };

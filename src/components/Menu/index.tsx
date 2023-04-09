@@ -24,6 +24,10 @@ const data = [
     to: "/users",
     text: "Usuários",
   },
+  {
+    to: "/workorders",
+    text: "Ordens de serviço",
+  },
 ];
 export const Menu = () => {
   return (

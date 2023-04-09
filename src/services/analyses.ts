@@ -78,4 +78,13 @@ export class AnalysesService {
 
     return workOrders;
   };
+
+  public deleteWorkOrder = async (id: number) => {
+    const response = await fetch(`${BASE_URL}/workorders/${id}`, {
+      method: "DELETE",
+    });
+    const order = await response.json();
+
+    return order;
+  };
 }

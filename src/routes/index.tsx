@@ -10,6 +10,7 @@ const Assets = lazy(() => import("@src/pages/Assets"));
 const AssetsDetails = lazy(() => import("@src/pages/Assets/Details"));
 const Companies = lazy(() => import("@src/pages/Companies"));
 const Units = lazy(() => import("@src/pages/Units"));
+const WorkOrders = lazy(() => import("@src/pages/WorkOrders"));
 
 export const Routes = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ export const Routes = createBrowserRouter([
       {
         path: "/units",
         element: <Units />,
+      },
+      {
+        path: "/workorders",
+        element: <WorkOrders />,
       },
     ],
   },
